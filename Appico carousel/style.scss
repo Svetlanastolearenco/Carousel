@@ -1,0 +1,195 @@
+$white: #FFF;
+$grey: #333;
+$blue: blue;
+$size: 1200px;
+
+
+.grey{
+    background-color: lighten($grey, 75%);
+    height: 200px;
+    /*width: 100vmax;*/
+}
+#appico{
+    background-color: $white;
+    margin: auto;
+    
+
+    .box{
+        width: $size;
+        height: 50vw;
+        /*background-color: $grey;*/
+        margin: auto;
+    }
+
+    .header{
+       text-align: center;
+
+        h1{
+           font-family: 'Poppins', sans-serif;
+           font-weight: 700;
+           margin-top: 2.5em;
+        }
+
+        p{
+           font-family: 'Roboto', sans-serif;
+           color: lighten($grey, 25%);
+           font-size: 0.85em;
+           margin-top: -1.2em;
+           margin-bottom: 6em;
+        }
+    }
+
+    .container{
+        width: $size * 0.9;
+        margin: auto;
+        position: relative;
+
+        .template>div{
+            width: 210px;
+            height: 450px;
+            border: 2px solid lighten($grey, 75%);
+            box-shadow: 0 0 3px 3px lighten($grey, 75%);
+            border-radius: 2em;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -30px;
+            margin: auto;
+
+            &::before{
+                content: "";
+                display: block;
+                width: 8px;
+                height: 8px;
+                background-color: lighten($grey, 65%);
+                border-radius: 100%;
+                position: absolute;
+                left: 3em;
+                top: 1.5em
+            }
+
+            &::after{
+                content: "";
+                display: block;
+                width: 50px;
+                height: 6px;
+                background-color: lighten($grey, 65%);
+                border-radius: 1em;
+                position: absolute;
+                left: 4.5em;
+                top: 1.5em
+            }
+        }
+
+        .template>div>div{
+            width: 100%;
+
+            &::before{
+                content: "";
+                display: block;
+                width: 28px;
+                height: 28px;
+                border: 2px solid lighten($grey, 65%);
+                box-shadow: 0 0 2px 2px lighten($grey, 65%);;
+                border-radius: 100%;
+                position: absolute;
+                left: 4.5em;
+                bottom: 1em
+            }
+        }
+        
+
+        .carousel{
+            width: 100%;
+            display: flex;
+            /*flex-direction: row;*/
+            justify-content: space-evenly;
+
+            .col{
+                width: 18%;
+                /*display: flex;*/
+                transform: scale(0.75);
+
+                img{
+                    width: 100%;
+                    }
+                }
+
+            /*div.col:nth-child(2),
+            div.col:nth-child(4){
+                transform: scale(0.75);
+            }
+
+            div.col:nth-child(1),
+            div.col:nth-child(5){
+                transform: scale(0.65);
+            }
+
+            div.col:nth-child(3){
+                margin: 0 30px;
+            }*/
+        }
+        }
+    }
+
+
+#appico .container .carousel .slick-next::before{
+    content: ">";
+}
+#appico .container .carousel .slick-prev::before{
+    content: "<";
+}
+#appico .container .carousel .slick-next::before,
+#appico .container .carousel .slick-prev::before {
+    color: $blue;
+    opacity: 80%;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 1000px){
+    #appico .box{
+        width: 100%;
+        height: 55vmax;
+
+        .container{
+            width: 95%;
+
+            .template{
+                width: 100%;
+            }
+
+            .template>div{
+                width: 40%;
+                height: 60vmax;
+                top: 35vmax;
+
+                &::before{
+                    left: 30%;
+                    top: 3vmax;
+                }
+    
+                &::after{
+                    left: 40%;
+                    top: 3vmax;
+                }
+            }
+
+            .template>div>div::before{
+                display: none;
+            }
+
+            .carousel{
+                width: 40%;
+                margin: auto;
+                transform: translateY(3vmax);
+
+            }
+        }
+    }
+
+    #appico .container .carousel .slick-next::before,
+    #appico .container .carousel .slick-prev::before {
+        display: none;
+    }
+}
