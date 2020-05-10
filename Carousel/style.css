@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  margin-top: 50vh;
+  margin-bottom: 50vh;
+}
+
+#testimonials {
+  background-color: #eee;
+}
+
+#testimonials .container {
+  width: 80vw;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#testimonials .container .col {
+  width: 50%;
+}
+
+#testimonials .carousel blockquote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  position: relative;
+}
+
+#testimonials .carousel blockquote h2 {
+  position: absolute;
+  font-family: 'Titillium Web', sans-serif;
+  color: orange;
+  font-weight: 400;
+  bottom: -1.5em;
+}
+
+#testimonials .carousel blockquote p {
+  font-family: 'Acme', sans-serif;
+  width: 89%;
+  line-height: 1.3em;
+  font-size: 1.2em;
+  color: #65908F;
+  text-indent: 1.7em;
+  padding-top: 0.8em;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+#testimonials .carousel blockquote p::after {
+  content: " '' ";
+  display: block;
+  position: absolute;
+  color: orange;
+  font-size: 4em;
+  top: 0.25em;
+  left: -0.4em;
+}
+
+#testimonials img {
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  #testimonials .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #testimonials .container .col {
+    width: 100%;
+  }
+}
+
+#testimonials .slick-dots {
+  text-align: left;
+  margin-left: 1.8em;
+}
+
+#testimonials .slick-dots li button::before {
+  color: orange;
+  font-size: 12px;
+}
+/*# sourceMappingURL=style.css.map */

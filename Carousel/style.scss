@@ -1,0 +1,83 @@
+$orange: orange;
+$grey: #eee;
+$color-text: #65908F;
+$offset: 50vh;
+$width: 100%;
+
+body{
+    margin: 0;
+    margin-top: $offset;
+    margin-bottom: $offset;
+}
+#testimonials{
+    background-color: $grey;
+
+    .container{
+        width: 80vw;
+        margin: auto;
+        display: flex;
+
+        .col{
+            width: 50%;
+        }
+    }
+
+    .carousel blockquote{
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+
+        h2{
+            position: absolute;
+            font-family: 'Titillium Web', sans-serif;
+            color: $orange;
+            font-weight: 400;
+            top: 6.5em;
+        }
+
+        p{
+            font-family: 'Acme', sans-serif;
+            width: 89%;
+            line-height: 1.3em;
+            font-size: 1.2em;
+            color: $color-text;
+            text-indent: 1.7em;
+            padding-top: 0.8em;
+            margin-bottom: 1em;
+            position: relative;
+
+            &::after{
+                content: " '' ";
+                display: block;
+                position: absolute;
+                color: $orange;
+                font-size: 4em;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}
+#testimonials img{
+    width: $width;
+}
+
+@media (max-width: 700px){
+    #testimonials .container{
+        flex-direction: column;
+
+        .col{
+            width: $width;
+        }
+    }
+}
+
+#testimonials .slick-dots {
+    text-align: left;
+    margin-left: 1.8em;
+
+    li button::before{
+        color: $orange;
+        font-size: 12px;
+    }
+}
